@@ -4,29 +4,29 @@ import main.com.tesfahun.ui.MenuProduct;
 
 import java.util.List;
 
-// This class represents a Sandwich object that includes size, bread, toppings, and toasted status
-import java.util.List;
+// This class represents a Sandwich object that includes size, injera, toppings, and toasted status
 
-// This class represents a Sandwich object that includes size, bread, toppings, and toasted status
+
+// This class represents a Sandwich object that includes size, injera, toppings, and toasted status
 public class Sandwich extends MenuProduct {
     private String size;                // 4", 8", or 12"
-    private Bread bread;               // Bread type chosen by the customer
+    private Injera injera;               // Injera type chosen by the customer
     private List<Topping> toppings;    // List of selected toppings (meats, cheese, veggies, sauces)
     private boolean toasted;           // Whether the sandwich is toasted
 
     // Constructor initializes sandwich details
-    public Sandwich(String size, Bread bread, List<Topping> toppings, boolean toasted) {
-        super(size + "\" " + bread.getDescription());
+    public Sandwich(String size, Injera injera, List<Topping> toppings, boolean toasted) {
+        super(size + "\" " + injera.getDescription());
         this.size = size;
-        this.bread = bread;
+        this.injera = injera;
         this.toppings = toppings;
         this.toasted = toasted;
     }
 
-    // Calculates the total price of the sandwich by adding up bread and toppings
+    // Calculates the total price of the sandwich by adding up injera and toppings
     @Override
     public double getPrice() {
-        double total = bread.getPrice();
+        double total = injera.getPrice();
         for (Topping topping : toppings) {
             total += topping.getPrice();
         }

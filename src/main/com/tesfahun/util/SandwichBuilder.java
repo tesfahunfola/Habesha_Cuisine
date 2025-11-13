@@ -6,45 +6,45 @@ import java.util.*;
 
 public class SandwichBuilder {
 
-    // Topping options organized into categories for meat, cheese, veggies, and sauces
+    // Topping options organized into categories for meat, side, veggies, and sauces
     private static final Map<String, List<String>> toppingOptions = Map.of(
-            "Meats", List.of("Steak", "Ham", "Salami", "Roast Beef", "Chicken", "Bacon"),
-            "Cheese", List.of("American", "Provolone", "Cheddar", "Swiss"),
-            "Toppings", List.of("Lettuce", "Peppers", "Onions", "Tomatoes", "Jalapeños", "Cucumbers", "Pickles", "Guacamole", "Mushrooms"),
-            "Sauces", List.of("Mayo", "Mustard", "Ketchup", "Ranch", "Thousand Islands", "Vinaigrette")
+            "Meats", List.of("Kitfo", "Gored", "Tibs", "Sigawot", "Yetibs Firfir", "Quanta Firfir"),
+            "Side", List.of("Ayeb", "Side Azefa", "Mitimita", "Kariya"),
+            "Toppings", List.of("Garlic", "Onions", "Kibe(Ethio Butter)", "Jalapeños","Salad", "Tomatoes", "Ethiopian Herbs"),
+            "Sauces", List.of("Berbere Sauce", "Ethiopian Mustard", "Ketchup", "Ranch")
     );
 
-    // List of bread types a customer can choose from
-    private static final List<String> breads = List.of("White", "Wheat", "Rye", "Wrap", "Ciabatta");
+    // List of injera types a customer can choose from
+    private static final List<String> injeras = List.of("Teff","White", "Gluten Free", "Wheat", "Regular");
 
     // This method walks the user through the full sandwich creation process
     public static Sandwich build(Scanner scanner) {
         String size = chooseSize(scanner);
-        Bread bread = chooseBread(scanner, size);
+        Injera injera = chooseInjera(scanner, size);
         List<Topping> toppings = chooseToppings(scanner, size);
-        boolean toasted = askYesNo(scanner, "Would you like your bread toasted?");
-        return new Sandwich(size, bread, toppings, toasted);
+        boolean toasted = askYesNo(scanner, "Would you like your injera toasted?");
+        return new Sandwich(size, injera, toppings, toasted);
     }
 
-    // Prompts the user to select the sandwich size (4", 8", or 12")
+    // Prompts the user to select the sandwich size (Half", Full", or Combo")
     private static String chooseSize(Scanner scanner) {
-        System.out.println("\n===== Choose Sandwich Size =====");
-        System.out.println("1) 4\"   2) 8\"   3) 12\"");
+        System.out.println("\n===== Choose Bowl/Plate Size =====");
+        System.out.println("1) Half\"   2) Full\"   3) Combo\"");
         System.out.print("Enter your choice: ");
         String input = scanner.nextLine();
         return switch (input) {
-            case "1" -> "4";
-            case "2" -> "8";
-            case "3" -> "12";
-            default -> "8";
+            case "1" -> "Half";
+            case "2" -> "Full";
+            case "3" -> "Combo";
+            default -> "Full";
         };
     }
 
-    // Shows bread options and asks the user to pick one, assigning a price based on size
-    private static Bread chooseBread(Scanner scanner, String size) {
-        System.out.println("\n===== Choose Your Bread =====");
-        for (int i = 0; i < breads.size(); i++) {
-            System.out.println((i + 1) + ") " + breads.get(i));
+    // Shows injera options and asks the user to pick one, assigning a price based on size
+    private static Injera chooseInjera(Scanner scanner, String size) {
+        System.out.println("\n===== Choose Your Injera =====");
+        for (int i = 0; i < injeras.size(); i++) {
+            System.out.println((i + 1) + ") " + injeras.get(i));
         }
 
         System.out.print("Choose a number (# to skip, Z to cancel): ");
@@ -53,16 +53,16 @@ public class SandwichBuilder {
 
         int index = input.equals("#") ? 0 : Integer.parseInt(input) - 1;
         double price = switch (size) {
-            case "4" -> 5.50;
-            case "8" -> 7.00;
-            case "12" -> 8.50;
+            case "Half" -> 5.50;
+            case "Full" -> 7.00;
+            case "Combo" -> 8.50;
             default -> 7.00;
         };
-        return new Bread(breads.get(index), price);
+        return new Injera(injeras.get(index), price);
     }
 
     // Asks the user to pick toppings by category, one at a time
-    // Meats and cheeses will also ask if the user wants extra
+    // Meats and sides will also ask if the user wants extra
     private static List<Topping> chooseToppings(Scanner scanner, String size) {
         List<Topping> all = new ArrayList<>();
 
@@ -91,8 +91,8 @@ public class SandwichBuilder {
                     String selected = items.get(index);
                     boolean isExtra = false;
 
-                    // Only meats and cheeses ask for extra
-                    if (type.equals("Meats") || type.equals("Cheese")) {
+                    // Only meats and sides ask for extra
+                    if (type.equals("Meats") || type.equals("side")) {
                         System.out.print("Would you like extra " + selected + "? (yes/no): ");
                         isExtra = scanner.nextLine().equalsIgnoreCase("yes");
                     }
@@ -120,14 +120,14 @@ public class SandwichBuilder {
     private static double getPriceByType(String type, String size, boolean extra) {
         double multiplier = switch (size) {
             case "4" -> 1.0;
-            case "8" -> 2.0;
+            case "8" -> 1.75;
             case "12" -> 3.0;
             default -> 1.0;
         };
 
         return switch (type) {
-            case "Meats" -> extra ? multiplier * 0.5 : multiplier * 1.0;
-            case "Cheese" -> extra ? multiplier * 0.3 : multiplier * 0.75;
+            case "Meats" -> extra ? multiplier * 17.5 : multiplier * 15.0;
+            case "side" -> extra ? multiplier * 0.5 : multiplier * 1.75;
             default -> 0.0;
         };
     }
@@ -140,7 +140,7 @@ public class SandwichBuilder {
 
     // Lets the user choose a drink size and flavor, then confirms the selection
     public static Drink selectDrink(Scanner scanner) {
-        List<String> flavors = List.of("Cola", "Lemonade", "Iced Tea", "Root Beer");
+        List<String> flavors = List.of("Perrier", "Tej (Honey Wine)", "Ethiopian Spiced Tea", "Ethiopian Beer");
         System.out.println("\n===== Select a Drink =====");
         System.out.println("1) Small   2) Medium   3) Large");
         System.out.print("Choose size: ");
@@ -162,20 +162,20 @@ public class SandwichBuilder {
         return drink;
     }
 
-    // Lets the user choose a chips flavor, or skip by entering 0
-    public static Chips selectChips(Scanner scanner) {
-        List<String> chips = List.of("BBQ", "Sour Cream", "Salt & Vinegar", "Jalapeño", "Lays Classic");
-        System.out.println("\n===== Select Chips =====");
-        for (int i = 0; i < chips.size(); i++) {
-            System.out.println((i + 1) + ") " + chips.get(i));
+    // Lets the user choose a appetizer flavor, or skip by entering 0
+    public static Appetizers selectAppetizers(Scanner scanner) {
+        List<String> appetizers = List.of("Sambusa", "Chechebsa", "Veggie rolls", "Foull", "Tomato Fitfit");
+        System.out.println("\n===== Select Appetizers =====");
+        for (int i = 0; i < appetizers.size(); i++) {
+            System.out.println((i + 1) + ") " + appetizers.get(i));
         }
 
         System.out.print("Choose a number (0 to skip): ");
         String input = scanner.nextLine();
         if (input.equals("0")) return null;
 
-        Chips chip = new Chips(chips.get(Integer.parseInt(input) - 1));
-        System.out.println("Added: " + chip.getDescription() + " [$" + String.format("%.2f", chip.getPrice()) + "]");
-        return chip;
+        Appetizers appetizers1 = new Appetizers(appetizers.get(Integer.parseInt(input) - 1));
+        System.out.println("Added: " + appetizers1.getDescription() + " [$" + String.format("%.2f", appetizers1.getPrice()) + "]");
+        return appetizers1;
     }
 }
