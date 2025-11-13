@@ -1,0 +1,72 @@
+package main.com.tesfahun.models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+// SignaturePlatter extends Sandwich and defines preset sandwiches with fixed toppings
+
+
+// SignaturePlatter extends Sandwich and defines preset sandwiches with fixed toppings
+public class SignaturePlatter extends Sandwich {
+
+    // Constructor takes the type of signature sandwich (e.g. "veggie combo", "meat combo")
+    public SignaturePlatter(String type) {
+        // Always 8" White bread for signature sandwiches
+        super("Full", getBread(), getToppings(type), isToasted(type));
+    }
+
+    // Always uses White bread for signature sandwiches
+    private static Injera getBread() {
+        return new Injera("regular", 7.00); // 8" white bread price
+    }
+
+    // Determines whether the sandwich is toasted based on its type
+    private static boolean isToasted(String type) {
+        return switch (type.toLowerCase()) {
+            case "veggie combo", "meat combo" -> true;
+            default -> false;
+        };
+    }
+
+    // Returns a preset list of toppings depending on the sandwich type
+    private static List<Topping> getToppings(String type) {
+        List<Topping> toppings = new ArrayList<>();
+        switch (type.toLowerCase()) {
+            case "veggie combo" -> {
+                toppings.add(new Topping("Misir", 8.00, false));
+                toppings.add(new Topping("Gomen", 7.50, false));
+                toppings.add(new Topping("Key Siir", 3.00, false));
+                toppings.add(new Topping("Shiro wot", 5.00, false));
+                toppings.add(new Topping("Ater", 5.00, false));
+            }
+            case "meat combo" -> {
+                toppings.add(new Topping("Kitfo", 9.00, false));
+                toppings.add(new Topping("Tibs", 10.50, false));
+                toppings.add(new Topping("Key Wot", 7.50, false));
+                toppings.add(new Topping("Gomen Besiga", 6.00, false));
+            }
+            case "habesha special" -> {
+                toppings.add(new Topping("Lettuce", 0.00, false));
+                toppings.add(new Topping("Tomatoes", 0.00, false));
+                toppings.add(new Topping("Cucumbers", 0.00, false));
+                toppings.add(new Topping("Pickles", 0.00, false));
+                toppings.add(new Topping("Vinaigrette", 0.00, false));
+            }
+        }
+        return toppings;
+    }
+
+    // ✅ Used for display confirmation in MainApp
+    public String getDisplayName() {
+        String desc = this.getDescription().toLowerCase();
+        if (desc.contains("misir") && desc.contains("ater")) {
+            return "Veggie Combo";
+        } else if (desc.contains("kitfo") && desc.contains("tibs")) {
+            return "Meat Combo";
+        } else if (desc.contains("cucumbers") && desc.contains("vinaigrette")) {
+            return "Habesha Special";
+        } else {
+            return "Custom Signature Sandwich";
+        }
+    }
+}

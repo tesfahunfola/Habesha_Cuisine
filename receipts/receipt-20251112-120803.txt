@@ -3,7 +3,7 @@ Order Type: Dine-in
 Time: 2025-11-12 12:08:03
 
 - small Lemonade [$2.00]
-- 4" Wheat bread (toasted)
+- 4" Wheat injera (toasted)
   - Salami (extra) [$1.00]
   - Ham [$1.00]
   - Swiss [$0.75]

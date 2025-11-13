@@ -1,0 +1,11 @@
+[=== 🧾 Order Reciept ===
+Order Type: Dine-in
+Time: 2025-11-12 21:27:50
+
+- Chips - Sour Cream [$1.50]
+
+Subtotal: $1.50
+Tax (10%): $0.15
+Tip: $0.30
+Total: $1.95
+Estimated Wait Time: 10–15 minutes
