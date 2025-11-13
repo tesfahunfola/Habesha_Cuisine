@@ -13,6 +13,7 @@ public class UserInterface {
 public void start() {
     while (running) {
         System.out.println("\n\u001B[36m=== 🥪 Welcome to Habesha Cuisine! ===\u001B[0m");
+//        Homescreen for my App
         System.out.println("1) 🧾 New Order");
         System.out.println("0) ❌ Exit");
         System.out.print("👉 Select an option: ");
