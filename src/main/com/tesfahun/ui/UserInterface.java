@@ -36,6 +36,7 @@ public void start() {
                     System.out.println("2) 🥤 Add Drink");
                     System.out.println("3) 🍟 Add Appetizers");
                     System.out.println("4) ⭐ Add Signature Platter");
+                    System.out.println("5) View Order");
                     System.out.println("5) ✅ Checkout");
                     System.out.println("0) ❌ Cancel Order");
                     System.out.print("👉 Select an option: ");
