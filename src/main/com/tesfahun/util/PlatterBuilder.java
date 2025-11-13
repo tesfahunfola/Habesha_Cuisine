@@ -22,7 +22,7 @@ public class PlatterBuilder {
         String size = chooseSize(scanner);
         Injera injera = chooseInjera(scanner, size);
         List<Topping> toppings = chooseToppings(scanner, size);
-        boolean toasted = askYesNo(scanner, "Would you like your injera toasted?");
+        boolean toasted = askYesNo(scanner, "Would you like your injera fresh?");
         return new CuisinePlatter(size, injera, toppings, toasted);
     }
 
