@@ -31,7 +31,7 @@ public void start() {
                 while (ordering) {
                     // Order menu
                     System.out.println("\n🍽️ Order Menu:");
-                    System.out.println("1) 🥪 Add Custom Sandwich");
+                    System.out.println("1) 🥪 Add Custom CuisinePlatter");
                     System.out.println("2) 🥤 Add Drink");
                     System.out.println("3) 🍟 Add Appetizers");
                     System.out.println("4) ⭐ Add Signature Platter");

@@ -4,7 +4,7 @@ import main.com.tesfahun.models.*;
 import main.com.tesfahun.models.Topping;
 import java.util.*;
 
-public class SandwichBuilder {
+public class PlatterBuilder {
 
     // Topping options organized into categories for meat, side, veggies, and sauces
     private static final Map<String, List<String>> toppingOptions = Map.of(
@@ -18,12 +18,12 @@ public class SandwichBuilder {
     private static final List<String> injeras = List.of("Teff","White", "Gluten Free", "Wheat", "Regular");
 
     // This method walks the user through the full sandwich creation process
-    public static Sandwich build(Scanner scanner) {
+    public static CuisinePlatter build(Scanner scanner) {
         String size = chooseSize(scanner);
         Injera injera = chooseInjera(scanner, size);
         List<Topping> toppings = chooseToppings(scanner, size);
         boolean toasted = askYesNo(scanner, "Would you like your injera toasted?");
-        return new Sandwich(size, injera, toppings, toasted);
+        return new CuisinePlatter(size, injera, toppings, toasted);
     }
 
     // Prompts the user to select the sandwich size (Half", Full", or Combo")

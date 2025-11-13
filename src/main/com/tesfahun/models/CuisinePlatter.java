@@ -4,18 +4,18 @@ import main.com.tesfahun.ui.MenuProduct;
 
 import java.util.List;
 
-// This class represents a Sandwich object that includes size, injera, toppings, and toasted status
+// This class represents a CuisinePlatter object that includes size, injera, toppings, and toasted status
 
 
-// This class represents a Sandwich object that includes size, injera, toppings, and toasted status
-public class Sandwich extends MenuProduct {
+// This class represents a CuisinePlatter object that includes size, injera, toppings, and toasted status
+public class CuisinePlatter extends MenuProduct {
     private String size;                // 4", 8", or 12"
     private Injera injera;               // Injera type chosen by the customer
     private List<Topping> toppings;    // List of selected toppings (meats, cheese, veggies, sauces)
     private boolean toasted;           // Whether the sandwich is toasted
 
     // Constructor initializes sandwich details
-    public Sandwich(String size, Injera injera, List<Topping> toppings, boolean toasted) {
+    public CuisinePlatter(String size, Injera injera, List<Topping> toppings, boolean toasted) {
         super(size + "\" " + injera.getDescription());
         this.size = size;
         this.injera = injera;

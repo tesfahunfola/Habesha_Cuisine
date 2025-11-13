@@ -3,11 +3,11 @@ package main.com.tesfahun.models;
 import java.util.ArrayList;
 import java.util.List;
 
-// SignaturePlatter extends Sandwich and defines preset sandwiches with fixed toppings
+// SignaturePlatter extends CuisinePlatter and defines preset sandwiches with fixed toppings
 
 
-// SignaturePlatter extends Sandwich and defines preset sandwiches with fixed toppings
-public class SignaturePlatter extends Sandwich {
+// SignaturePlatter extends CuisinePlatter and defines preset sandwiches with fixed toppings
+public class SignaturePlatter extends CuisinePlatter {
 
     // Constructor takes the type of signature sandwich (e.g. "veggie combo", "meat combo")
     public SignaturePlatter(String type) {
@@ -46,11 +46,11 @@ public class SignaturePlatter extends Sandwich {
                 toppings.add(new Topping("Gomen Besiga", 6.00, false));
             }
             case "habesha special" -> {
-                toppings.add(new Topping("Lettuce", 0.00, false));
-                toppings.add(new Topping("Tomatoes", 0.00, false));
-                toppings.add(new Topping("Cucumbers", 0.00, false));
-                toppings.add(new Topping("Pickles", 0.00, false));
-                toppings.add(new Topping("Vinaigrette", 0.00, false));
+                toppings.add(new Topping("Gored", 10.00, false));
+                toppings.add(new Topping("Awaze Tibs", 8.00, false));
+                toppings.add(new Topping("Bozena Shiro", 11.00, false));
+                toppings.add(new Topping("Minchet", 9.00, false));
+                toppings.add(new Topping("Beef Alicha", 8.00, false));
             }
         }
         return toppings;
@@ -63,10 +63,10 @@ public class SignaturePlatter extends Sandwich {
             return "Veggie Combo";
         } else if (desc.contains("kitfo") && desc.contains("tibs")) {
             return "Meat Combo";
-        } else if (desc.contains("cucumbers") && desc.contains("vinaigrette")) {
+        } else if (desc.contains("gored") && desc.contains("minchet")) {
             return "Habesha Special";
         } else {
-            return "Custom Signature Sandwich";
+            return "Custom Signature CuisinePlatter";
         }
     }
 }
