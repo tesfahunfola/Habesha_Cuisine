@@ -2,17 +2,17 @@ package main.com.tesfahun.ui;
 
 import main.com.tesfahun.models.Order;
 import main.com.tesfahun.models.OrderItem;
-import main.com.tesfahun.models.SignatureSandwich;
+import main.com.tesfahun.models.SignaturePlatter;
 
 
 import java.util.Scanner;
 
-public class MainApp {
+public class UserInterface {
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 public void start() {
     while (running) {
-        System.out.println("\n\u001B[36m=== 🥪 Welcome to DELI-cious! ===\u001B[0m");
+        System.out.println("\n\u001B[36m=== 🥪 Welcome to Habesha Cuisine! ===\u001B[0m");
         System.out.println("1) 🧾 New Order");
         System.out.println("0) ❌ Exit");
         System.out.print("👉 Select an option: ");
@@ -33,8 +33,8 @@ public void start() {
                     System.out.println("\n🍽️ Order Menu:");
                     System.out.println("1) 🥪 Add Custom Sandwich");
                     System.out.println("2) 🥤 Add Drink");
-                    System.out.println("3) 🍟 Add Chips");
-                    System.out.println("4) ⭐ Add Signature Sandwich");
+                    System.out.println("3) 🍟 Add Appetizers");
+                    System.out.println("4) ⭐ Add Signature Platter");
                     System.out.println("5) ✅ Checkout");
                     System.out.println("0) ❌ Cancel Order");
                     System.out.print("👉 Select an option: ");
@@ -43,24 +43,24 @@ public void start() {
                     switch (orderChoice) {
                         case "1" -> order.addItem(OrderItem.createSandwich(scanner));
                         case "2" -> order.addItem(OrderItem.createDrink(scanner));
-                        case "3" -> order.addItem(OrderItem.createChips(scanner));
+                        case "3" -> order.addItem(OrderItem.createAppetizers(scanner));
 
                         case "4" -> {
-                            System.out.println("⭐ Signature Sandwiches:");
-                            System.out.println("1) BLT\n2) Philly Cheese\n3) Veggie Delight");
+                            System.out.println("⭐ Signature Platter:");
+                            System.out.println("1) Veggie Combo\n2) Meat Combo\n3) Habesha Special");
                             System.out.print("Choose (1–3): ");
                             String choiceSig = scanner.nextLine();
 
-                            SignatureSandwich sig = switch (choiceSig) {
-                                case "1" -> new SignatureSandwich("blt");
-                                case "2" -> new SignatureSandwich("philly cheese");
-                                case "3" -> new SignatureSandwich("veggie delight");
+                            SignaturePlatter sig = switch (choiceSig) {
+                                case "1" -> new SignaturePlatter("veggie combo");
+                                case "2" -> new SignaturePlatter("meat combo");
+                                case "3" -> new SignaturePlatter("habesha special");
                                 default -> null;
                             };
 
                             if (sig != null) {
                                 order.addItem(sig);
-                                System.out.println("✅ Signature sandwich \"" + sig.getDisplayName() + "\" added.");
+                                System.out.println("✅ Signature Platter \"" + sig.getDisplayName() + "\" added.");
                             } else {
                                 System.out.println("❌ Invalid choice.");
                             }
@@ -101,7 +101,7 @@ public void start() {
                             System.out.print("🧾 Confirm order? (yes/no): ");
                             if (scanner.nextLine().equalsIgnoreCase("yes")) {
                                 order.saveReceipt();
-                                System.out.println("✅ Order placed successfully!");
+                                System.out.println("✅ Order placed successfully🎉! Thank you for your order!");
                             } else {
                                 System.out.println("🛑 Order not confirmed.");
                             }
@@ -120,7 +120,7 @@ public void start() {
             }
 
             case "0" -> {
-                System.out.println("👋 Thank you for visiting DELI-cious!");
+                System.out.println("👋 Thank you for visiting Habesha Cuisine!");
                 running = false;
             }
 
