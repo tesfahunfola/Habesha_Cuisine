@@ -16,8 +16,8 @@ public class OrderItem {
         return SandwichBuilder.selectDrink(scanner);
     }
 
-    // This method lets the user choose a bag of chips and returns it
-    public static Chips createChips(Scanner scanner) {
-        return SandwichBuilder.selectChips(scanner);
+    // This method lets the user choose a bag of Appetizers and returns it
+    public static Appetizers createAppetizers(Scanner scanner) {
+        return SandwichBuilder.selectAppetizers(scanner);
     }
 }

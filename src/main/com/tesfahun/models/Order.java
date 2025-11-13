@@ -1,6 +1,7 @@
 package main.com.tesfahun.models;
 
 import main.com.tesfahun.ui.MenuProduct;
+import main.com.tesfahun.util.Orderable;
 
 import java.io.IOException;
 import java.nio.file.*;
@@ -9,9 +10,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 // This class handles an entire customer order, including tip, receipt saving, and price calculation
-public class Order {
+public class Order implements Orderable {
     private static final double TAX_RATE = 0.10;  // 10% tax
-    private List<MenuProduct> items = new ArrayList<>();  // All items in the order (sandwiches, chips, drinks)
+    private List<MenuProduct> items = new ArrayList<>();  // All items in the order (sandwiches, appetizer, drinks)
     private String orderType = "Dine-in"; // Either "Dine-in" or "Takeout"
     private double tip = 0.0;  // Customer tip amount
 
@@ -21,7 +22,7 @@ public class Order {
         else if (type.equals("2")) this.orderType = "Takeout";
     }
 
-    // Add a product (sandwich, drink, chip, etc.) to the order
+    // Add a product (sandwich, drink, appetizer, etc.) to the order
     public void addItem(MenuProduct item) {
         if (item != null) items.add(item);
     }
@@ -49,24 +50,32 @@ public class Order {
     // This builds a human-readable summary of the full order
     public String getSummary() {
         StringBuilder sb = new StringBuilder();
-        sb.append("\u001B[36m=== 🧾 Order Summary ===\u001B[0m\n");
+
+        sb.append("╔════════════════════════════════════╗\n");
+        sb.append("║        🎀  🧾 ORDER RECEIPT 🧾  🎀║\n");
+        sb.append("╚════════════════════════════════════╝\n\n");
+
         sb.append("Order Type: ").append(orderType).append("\n");
         sb.append("Time: ").append(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))).append("\n\n");
 
+        sb.append("🍽️  Items Ordered:\n");
         for (MenuProduct item : items) {
-            sb.append("- ").append(item.getDescription()).append(" [$")
-                    .append(String.format("%.2f", item.getPrice())).append("]\n");
+            sb.append("  • ").append(item.getDescription())
+                    .append("  [$").append(String.format("%.2f", item.getPrice())).append("]\n");
         }
 
-        sb.append("\nSubtotal: $").append(String.format("%.2f", getSubtotal())).append("\n");
-        sb.append("Tax (10%): $").append(String.format("%.2f", getTax())).append("\n");
+        sb.append("\n💵 Subtotal: $").append(String.format("%.2f", getSubtotal())).append("\n");
+        sb.append("💰 Tax (10%): $").append(String.format("%.2f", getTax())).append("\n");
 
         if (tip > 0) {
-            sb.append("Tip: $").append(String.format("%.2f", tip)).append("\n");
+            sb.append("💖 Tip: $").append(String.format("%.2f", tip)).append("\n");
         }
 
-        sb.append("Total: $").append(String.format("%.2f", getTotal())).append("\n");
-        sb.append("Estimated Wait Time: 10–15 minutes\n");
+        sb.append("──────────────────────────────────────\n");
+        sb.append("🧮 Total: $").append(String.format("%.2f", getTotal())).append("\n");
+        sb.append("──────────────────────────────────────\n");
+        sb.append("⏰ Estimated Wait Time: 10–15 minutes\n");
+
         return sb.toString();
     }
 
@@ -83,5 +92,17 @@ public class Order {
         } catch (IOException e) {
             System.out.println("❌ Error saving receipt: " + e.getMessage());
         }
+    }
+
+
+
+    @Override
+    public String getDescription() {
+        return "";
+    }
+
+    @Override
+    public double getPrice() {
+        return 0;
     }
 }
