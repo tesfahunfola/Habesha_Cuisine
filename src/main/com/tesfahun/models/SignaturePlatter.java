@@ -11,16 +11,16 @@ public class SignaturePlatter extends CuisinePlatter {
 
     // Constructor takes the type of signature sandwich (e.g. "veggie combo", "meat combo")
     public SignaturePlatter(String type) {
-        // Always 8" White bread for signature sandwiches
+        // Always small" White injera for signature sandwiches
         super("Full", getBread(), getToppings(type), isToasted(type));
     }
 
-    // Always uses White bread for signature sandwiches
+    // Always uses regular injera for signature sandwiches
     private static Injera getBread() {
-        return new Injera("regular", 7.00); // 8" white bread price
+        return new Injera("regular", 7.00); // full" regular injera price
     }
 
-    // Determines whether the sandwich is toasted based on its type
+    // Determines whether the injera is toasted based on its type
     private static boolean isToasted(String type) {
         return switch (type.toLowerCase()) {
             case "veggie combo", "meat combo" -> true;
