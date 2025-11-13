@@ -4,7 +4,6 @@ import main.com.tesfahun.ui.MenuProduct;
 import main.com.tesfahun.util.Orderable;
 
 // Appetizers class represents a appetizer item in the order
-// Appetizers class represents a appetizer item in the order
 public class Appetizers extends MenuProduct implements Orderable {
 
     // Constructor takes the flavor
