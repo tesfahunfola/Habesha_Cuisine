@@ -1,0 +1,26 @@
+[36m=== 🧾 Order Summary ===[0m
+Order Type: Takeout
+Time: 2025-11-12 14:05:11
+
+- medium Cola [$2.50]
+- Chips - Jalapeño [$1.50]
+- 8" Wheat bread (toasted)
+  - Mayo [$0.00]
+  - Ranch [$0.00]
+  - Steak [$2.00]
+  - Ham (extra) [$2.00]
+  - Swiss [$1.50]
+ [$12.50]
+- 8" White bread (toasted)
+  - Bacon [$2.00]
+  - Cheddar [$1.50]
+  - Lettuce [$0.00]
+  - Tomatoes [$0.00]
+  - Ranch [$0.00]
+ [$10.50]
+
+Subtotal: $27.00
+Tax (10%): $2.70
+Tip: $5.40
+Total: $35.10
+Estimated Wait Time: 10–15 minutes
