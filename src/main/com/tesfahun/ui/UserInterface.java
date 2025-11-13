@@ -36,7 +36,8 @@ public void start() {
                     System.out.println("2) 🥤 Add Drink");
                     System.out.println("3) 🍟 Add Appetizers");
                     System.out.println("4) ⭐ Add Signature Platter");
-                    System.out.println("5) ✅ Checkout");
+                    System.out.println("5) 🔍 View Order");
+                    System.out.println("6) ✅ Checkout");
                     System.out.println("0) ❌ Cancel Order");
                     System.out.print("👉 Select an option: ");
                     String orderChoice = scanner.nextLine();
@@ -66,8 +67,14 @@ public void start() {
                                 System.out.println("❌ Invalid choice.");
                             }
                         }
-
                         case "5" -> {
+                            if (order.getSummary().isEmpty()) System.out.println("You haven't ordered anything yet 🛍️. Please add an item ➕.");
+                            else {
+                                System.out.println(order.getSummary());
+                            }
+                        }
+
+                        case "6" -> {
                             // Show summary before tip
                             System.out.println(order.getSummary());
 
