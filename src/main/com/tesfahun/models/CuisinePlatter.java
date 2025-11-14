@@ -5,7 +5,6 @@ import main.com.tesfahun.ui.MenuProduct;
 import java.util.List;
 
 
-// This class represents a CuisinePlatter object that includes size, injera, toppings, and toasted status
 public class CuisinePlatter extends MenuProduct {
     private String size;
     private Injera injera;               // Injera type chosen by the customer

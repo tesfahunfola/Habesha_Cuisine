@@ -1,10 +1,9 @@
 package main.com.tesfahun.ui;
 import main.com.tesfahun.models.*;
 
-// This abstract class is the foundation for all menu items (like CuisinePlatter, Drinks, Appetizers, etc.)
+
 public abstract class MenuProduct {
     protected String name; // Every product has a name
-
     // Constructor to set the name
     public MenuProduct(String name) {
         this.name = name;
