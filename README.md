@@ -188,8 +188,6 @@ Unit tests are provided for key classes using JUnit 5. To run the tests:
 ## Contributing
 Feel free to fork the repository and submit pull requests for improvements or bug fixes.
 
-## License
-This project is open-source. No specific license is defined; use at your own discretion.
 
 ## Contact
 For questions or feedback, please reach out to the project maintainer.
