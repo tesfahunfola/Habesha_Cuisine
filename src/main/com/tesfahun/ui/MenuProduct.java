@@ -1,8 +1,7 @@
 package main.com.tesfahun.ui;
 import main.com.tesfahun.models.*;
 
-// This abstract class is the foundation for all menu items (like Sandwiches, Drinks, Appetizers, etc.)
-// This abstract class is the foundation for all menu items (like Sandwiches, Drinks, Appetizers, etc.)
+// This abstract class is the foundation for all menu items
 public abstract class MenuProduct {
     protected String name; // Every product has a name, like "Small Cola" or "Cheddar Cheese"
 

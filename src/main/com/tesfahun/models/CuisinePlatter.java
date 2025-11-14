@@ -7,7 +7,6 @@ import java.util.List;
 // This class represents a CuisinePlatter object that includes size, injera, toppings, and toasted status
 
 
-// This class represents a CuisinePlatter object that includes size, injera, toppings, and toasted status
 public class CuisinePlatter extends MenuProduct {
     private String size;                // 4", 8", or 12"
     private Injera injera;               // Injera type chosen by the customer
