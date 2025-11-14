@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class OrderItem {
 
-    // This method creates a custom sandwich using the PlatterBuilder
+    // This method creates a custom platter using the PlatterBuilder
     public static CuisinePlatter createSandwich(Scanner scanner) {
         return PlatterBuilder.build(scanner);
     }

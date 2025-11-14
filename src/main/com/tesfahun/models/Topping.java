@@ -2,7 +2,7 @@ package main.com.tesfahun.models;
 
 import main.com.tesfahun.ui.MenuProduct;
 
-// Topping class represents any topping added to a sandwich—meats, cheeses, veggies, sauces
+// Topping class represents any topping added to a platter—meats, side, veggies, sauces
 public class Topping extends MenuProduct {
     private double basePrice; // Base price of the topping depending on size/category
     private boolean isExtra;  // If true, it's an extra portion (charged more)
