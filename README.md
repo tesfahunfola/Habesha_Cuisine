@@ -35,7 +35,7 @@ This project simulates a point-of-sale system for a restaurant, focusing on Ethi
 - **User-Friendly Interface**: Interactive menu-driven console interface with emojis and clear prompts.
 
 ## Screenshots
-![Screenshot 1](Screenshot/1Screenshot 2025-11-14 033736.png)
+![Screenshot 1](Screenshot/1Screens![1Screenshot 2025-11-14 033736.png](Screenshot/1Screenshot%202025-11-14%20033736.png)hot 2025-11-14 033736.png)
 ![Screenshot 2](Screenshot/2Screenshot 2025-11-14 034022.png)
 ![Screenshot 3](Screenshot/3Screenshot 2025-11-14 034122.png)
 ![Screenshot 4](Screenshot/4Screenshot 2025-11-14 034231.png)
