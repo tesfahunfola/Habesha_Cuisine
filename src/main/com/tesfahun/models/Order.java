@@ -12,7 +12,7 @@ import java.util.*;
 // This class handles an entire customer order, including tip, receipt saving, and price calculation
 public class Order implements Orderable {
     private static final double TAX_RATE = 0.10;  // 10% tax
-    private List<MenuProduct> items = new ArrayList<>();  // All items in the order (sandwiches, appetizer, drinks)
+    private List<MenuProduct> items = new ArrayList<>();  // All items in the order (platter, appetizer, drinks)
     private String orderType = "Dine-in"; // Either "Dine-in" or "Takeout"
     private double tip = 0.0;  // Customer tip amount
 
@@ -22,7 +22,7 @@ public class Order implements Orderable {
         else if (type.equals("2")) this.orderType = "Takeout";
     }
 
-    // Add a product (sandwich, drink, appetizer, etc.) to the order
+    // Add a product (platter, drink, appetizer, etc.) to the order
     public void addItem(MenuProduct item) {
         if (item != null) items.add(item);
     }
@@ -88,7 +88,7 @@ public class Order implements Orderable {
         try {
             Files.createDirectories(dir);
             Files.write(file, getSummary().getBytes());
-            System.out.println("✅ Receipt saved to: " + file);
+            System.out.println("✅ Order saved to: " + file);
         } catch (IOException e) {
             System.out.println("❌ Error saving receipt: " + e.getMessage());
         }

@@ -17,7 +17,7 @@ public class PlatterBuilder {
     // List of injera types a customer can choose from
     private static final List<String> injeras = List.of("Teff","White", "Gluten Free", "Wheat", "Regular");
 
-    // This method walks the user through the full sandwich creation process
+    // This method walks the user through the full platter creation process
     public static CuisinePlatter build(Scanner scanner) {
         String size = chooseSize(scanner);
         Injera injera = chooseInjera(scanner, size);
@@ -26,7 +26,7 @@ public class PlatterBuilder {
         return new CuisinePlatter(size, injera, toppings, toasted);
     }
 
-    // Prompts the user to select the sandwich size (Half", Full", or Combo")
+    // Prompts the user to select the platter size (Half", Full", or Combo")
     private static String chooseSize(Scanner scanner) {
         System.out.println("\n===== Choose Bowl/Plate Size =====");
         System.out.println("1) Half\"   2) Full\"   3) Combo\"");
@@ -101,7 +101,7 @@ public class PlatterBuilder {
                     Topping topping = new Topping(selected, price, isExtra);
                     all.add(topping);
 
-                    System.out.printf("Added: %s%s [$%.2f]%n",
+                    System.out.printf("Added: %s%s %n",
                             selected,
                             isExtra ? " (extra)" : "",
                             price

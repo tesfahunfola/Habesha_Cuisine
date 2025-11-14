@@ -3,14 +3,14 @@ package main.com.tesfahun.models;
 import main.com.tesfahun.ui.MenuProduct;
 import main.com.tesfahun.util.Orderable;
 
-// Drink class represents a drink item in the order
+
 // Drink class represents a drink item in the order
 public class Drink extends MenuProduct implements Orderable {
     private String size;  // small, medium, large
 
-    // Constructor to set the drink size and flavor (e.g. "Medium Cola")
+    // Constructor to set the drink size and flavor
     public Drink(String size, String flavor) {
-        super(size + " " + flavor); // Name will look like "Medium Cola"
+        super(size + " " + flavor); // Name will look like "Medium perrier"
         this.size = size.toLowerCase(); // Normalize for pricing logic
     }
 

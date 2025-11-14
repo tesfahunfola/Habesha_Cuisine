@@ -3,10 +3,10 @@ package main.com.tesfahun.models;
 import main.com.tesfahun.ui.MenuProduct;
 import main.com.tesfahun.util.Orderable;
 
-// Injera class represents the injera type chosen for the sandwich
+// Injera class represents the injera type chosen for the platter
 
 public class Injera extends MenuProduct implements Orderable {
-    private double price; // Holds the price for this injera based on sandwich size
+    private double price; // Holds the price for this injera based on platter size
 
     // Constructor sets the injera name and price
     public Injera(String name, double price) {

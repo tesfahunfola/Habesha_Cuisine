@@ -49,7 +49,7 @@ public void start() {
 
                         case "4" -> {
                             System.out.println("⭐ Signature Platter:");
-                            System.out.println("1) Veggie Combo\n2) Meat Combo\n3) Habesha Special");
+                            System.out.println("1) Veggie Combo - (Misir ✦ Gomen ✦ Key Siir ✦ Shiro Wot ✦ Ater)\n2) Meat Combo - (Kitfo ✦ Tibs ✦ Key Wot ✦ Gomen Besiga)\n3) Habesha Special - (Gored ✦ Awaze Tibs ✦ Bozena Shiro ✦ Minchet ✦ Beef Alicha)");
                             System.out.print("Choose (1–3): ");
                             String choiceSig = scanner.nextLine();
 
