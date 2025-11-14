@@ -3,8 +3,6 @@ package main.com.tesfahun.models;
 import java.util.ArrayList;
 import java.util.List;
 
-// SignaturePlatter extends CuisinePlatter and defines preset sandwiches with fixed toppings
-
 
 // SignaturePlatter extends CuisinePlatter and defines preset sandwiches with fixed toppings
 public class SignaturePlatter extends CuisinePlatter {
