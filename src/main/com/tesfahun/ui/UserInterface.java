@@ -1,6 +1,6 @@
 package main.com.tesfahun.ui;
 
-import main.com.tesfahun.models.Receipt;
+import main.com.tesfahun.models.Order;
 import main.com.tesfahun.models.OrderItem;
 import main.com.tesfahun.models.SignaturePlatter;
 
@@ -21,16 +21,16 @@ public void start() {
 
         switch (choice) {
             case "1" -> {
-                Receipt receipt = new Receipt();
+                Order order = new Order();
 
                 // Dine-in or Takeout
                 System.out.println("1) 🍽️ Dine-in\n2) 🛍️ Takeout");
                 System.out.print("👉 Enter your choice: ");
-                receipt.setOrderType(scanner.nextLine());
+                order.setOrderType(scanner.nextLine());
 
                 boolean ordering = true;
                 while (ordering) {
-                    // Receipt menu
+                    // Order menu
                     System.out.println("\n🍽️ Order Menu:");
                     System.out.println("1) 🥪 Add Custom CuisinePlatter");
                     System.out.println("2) 🥤 Add Drink");
@@ -43,13 +43,13 @@ public void start() {
                     String orderChoice = scanner.nextLine();
 
                     switch (orderChoice) {
-                        case "1" -> receipt.addItem(OrderItem.createSandwich(scanner));
-                        case "2" -> receipt.addItem(OrderItem.createDrink(scanner));
-                        case "3" -> receipt.addItem(OrderItem.createAppetizers(scanner));
+                        case "1" -> order.addItem(OrderItem.createSandwich(scanner));
+                        case "2" -> order.addItem(OrderItem.createDrink(scanner));
+                        case "3" -> order.addItem(OrderItem.createAppetizers(scanner));
 
                         case "4" -> {
                             System.out.println("⭐ Signature Platter:");
-                            System.out.println("1) Veggie Combo (Misir, Gomen, Key siir, Shiro Wot, Alter)\n2) Meat Combo (Kitfo, Tibs, Key wot, Gomen besiga)\n3) Habesha Special (Gored, Awaze Tibs, Bozena Shiro, Minchet, Beef Alicha)");
+                            System.out.println("1) Veggie Combo - (Misir ✦ Gomen ✦ Key Siir ✦ Shiro Wot ✦ Ater)\n2) Meat Combo - (Kitfo ✦ Tibs ✦ Key Wot ✦ Gomen Besiga)\n3) Habesha Special - (Gored ✦ Awaze Tibs ✦ Bozena Shiro ✦ Minchet ✦ Beef Alicha)");
                             System.out.print("Choose (1–3): ");
                             String choiceSig = scanner.nextLine();
 
@@ -61,22 +61,22 @@ public void start() {
                             };
 
                             if (sig != null) {
-                                receipt.addItem(sig);
+                                order.addItem(sig);
                                 System.out.println("✅ Signature Platter \"" + sig.getDisplayName() + "\" added.");
                             } else {
                                 System.out.println("❌ Invalid choice.");
                             }
                         }
                         case "5" -> {
-                            if (receipt.getSummary().isEmpty()) System.out.println("You haven't ordered anything yet 🛍️. Please add an item ➕.");
+                            if (order.getSummary().isEmpty()) System.out.println("You haven't ordered anything yet 🛍️. Please add an item ➕.");
                             else {
-                                System.out.println(receipt.getSummary());
+                                System.out.println(order.getSummary());
                             }
                         }
 
                         case "6" -> {
                             // Show summary before tip
-                            System.out.println(receipt.getSummary());
+                            System.out.println(order.getSummary());
 
                             // 💰 Tip selection
                             System.out.println("💰 Would you like to leave a tip?");
@@ -84,41 +84,41 @@ public void start() {
                             System.out.print("👉 Choose an option: ");
                             String tipChoice = scanner.nextLine();
 
-                            double subtotal = receipt.getSubtotal();
+                            double subtotal = order.getSubtotal();
                             switch (tipChoice) {
-                                case "1" -> receipt.setTip(subtotal * 0.10);
-                                case "2" -> receipt.setTip(subtotal * 0.15);
-                                case "3" -> receipt.setTip(subtotal * 0.20);
+                                case "1" -> order.setTip(subtotal * 0.10);
+                                case "2" -> order.setTip(subtotal * 0.15);
+                                case "3" -> order.setTip(subtotal * 0.20);
                                 case "4" -> {
                                     System.out.print("Enter custom tip amount: ");
                                     try {
                                         double tip = Double.parseDouble(scanner.nextLine());
-                                        receipt.setTip(tip);
+                                        order.setTip(tip);
                                     } catch (NumberFormatException e) {
                                         System.out.println("❌ Invalid tip entered. No tip added.");
                                     }
                                 }
-                                case "5" -> receipt.setTip(0.0);
+                                case "5" -> order.setTip(0.0);
                                 default -> System.out.println("❌ Invalid choice. No tip added.");
                             }
 
                             // Final summary
-                            System.out.println(receipt.getSummary());
+                            System.out.println(order.getSummary());
 
-                            // Confirm receipt
-                            System.out.print("🧾 Confirm receipt? (yes/no): ");
+                            // Confirm order
+                            System.out.print("🧾 Confirm order? (yes/no): ");
                             if (scanner.nextLine().equalsIgnoreCase("yes")) {
-                                receipt.saveReceipt();
-                                System.out.println("✅ Receipt placed successfully🎉! Thank you for your receipt!");
+                                order.saveReceipt();
+                                System.out.println("✅ Order placed successfully🎉! Thank you for your order!");
                             } else {
-                                System.out.println("🛑 Receipt not confirmed.");
+                                System.out.println("🛑 Order not confirmed.");
                             }
 
                             ordering = false;
                         }
 
                         case "0" -> {
-                            System.out.println("🗑️ Receipt canceled.");
+                            System.out.println("🗑️ Order canceled.");
                             ordering = false;
                         }
 
