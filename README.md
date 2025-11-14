@@ -17,7 +17,7 @@
   - [Test Coverage](#test-coverage)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+- [Credits](#credits)
 - [Contact](#contact)
 
 ## Description
