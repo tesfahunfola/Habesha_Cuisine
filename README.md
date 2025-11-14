@@ -75,28 +75,54 @@ Habesha_Cuisine/
 ├── .gitignore                 # Git ignore file for IDEs and build outputs
 ├── Habesha_Cuisine.iml        # IntelliJ IDEA module file
 ├── README.md                  # This file
+├── lib/                       # Library dependencies (e.g., JUnit jars)
+│   └── junit-platform-console-standalone-1.10.1.jar
 ├── receipts/                  # Folder for saved order receipts (auto-generated)
 │   └── receipt-YYYYMMDD-HHMMSS.txt  # Example receipt files
+├── Screenshot/                # Screenshots of the application
+│   ├── 1Screenshot 2025-11-14 033736.png
+│   ├── 2Screenshot 2025-11-14 034022.png
+│   ├── 3Screenshot 2025-11-14 034122.png
+│   ├── 4Screenshot 2025-11-14 034231.png
+│   ├── 5Screenshot 2025-11-14 034336.png
+│   ├── 6Screenshot 2025-11-14 034432.png
+│   ├── 7Screenshot 2025-11-14 034530.png
+│   ├── 8Screenshot 2025-11-14 034626.png
+│   └── 9Screenshot 2025-11-14 034712.png
+├── UML diagram/               # UML diagram files
+│   └── Habesha_Cuisine UML.drawio.png
 ├── src/
-│   └── main/
-│       └── com/
-│           └── tesfahun/
-│               ├── models/    # Data models for menu items and orders
-│               │   ├── Appetizers.java
-│               │   ├── CuisinePlatter.java
-│               │   ├── Drink.java
-│               │   ├── Injera.java
-│               │   ├── Order.java
-│               │   ├── OrderItem.java
-│               │   ├── SignaturePlatter.java
-│               │   └── Topping.java
-│               ├── ui/        # User interface components
-│               │   ├── Main.java          # Entry point of the application
-│               │   ├── MenuProduct.java   # Abstract base for menu items
-│               │   └── UserInterface.java # Handles user interactions and menus
-│               └── util/     # Utility classes
-│                   ├── Orderable.java     # Interface for orderable items
-│                   └── PlatterBuilder.java # Builder for custom platters
+│   ├── main/
+│   │   └── com/
+│   │       └── tesfahun/
+│   │           ├── models/    # Data models for menu items and orders
+│   │           │   ├── Appetizers.java
+│   │           │   ├── CuisinePlatter.java
+│   │           │   ├── Drink.java
+│   │           │   ├── Injera.java
+│   │           │   ├── Order.java
+│   │           │   ├── OrderItem.java
+│   │           │   ├── SignaturePlatter.java
+│   │           │   └── Topping.java
+│   │           ├── ui/        # User interface components
+│   │           │   ├── Main.java          # Entry point of the application
+│   │           │   ├── MenuProduct.java   # Abstract base for menu items
+│   │           │   └── UserInterface.java # Handles user interactions and menus
+│   │           └── util/     # Utility classes
+│   │               ├── Orderable.java     # Interface for orderable items
+│   │               └── PlatterBuilder.java # Builder for custom platters
+│   └── test/
+│       └── java/
+│           └── main/
+│               └── com/
+│                   └── tesfahun/
+│                       ├── models/    # Unit tests for models
+│                       │   ├── CuisinePlatterTest.java
+│                       │   ├── DrinkTest.java
+│                       │   ├── InjeraTest.java
+│                       │   ├── OrderTest.java
+│                       │   └── ToppingTest.java
+│                       └── util/     # Unit tests for utilities
 └── out/                      # Compiled classes (excluded from git)
 ```
 
@@ -133,6 +159,9 @@ Unit tests are provided for key classes using JUnit 5. To run the tests:
 ### Test Coverage
 - **OrderTest**: Tests order management, subtotal, tax, total calculations, and tip setting.
 - **DrinkTest**: Tests drink pricing based on size.
+- **CuisinePlatterTest**: Tests custom cuisine platter creation and pricing.
+- **InjeraTest**: Tests injera types and pricing.
+- **ToppingTest**: Tests topping options and pricing.
 
 ## Usage
 1. Run the application as described above.
