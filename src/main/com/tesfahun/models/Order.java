@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 // This class handles an entire customer order, including tip, receipt saving, and price calculation
-public class Receipt implements Orderable {
+public class Order implements Orderable {
     private static final double TAX_RATE = 0.10;  // 10% tax
     private List<MenuProduct> items = new ArrayList<>();  // All items in the order (platter, appetizer, drinks)
     private String orderType = "Dine-in"; // Either "Dine-in" or "Takeout"
@@ -55,7 +55,7 @@ public class Receipt implements Orderable {
         sb.append("║        🎀  🧾 ORDER RECEIPT 🧾  🎀║\n");
         sb.append("╚════════════════════════════════════╝\n\n");
 
-        sb.append("Receipt Type: ").append(orderType).append("\n");
+        sb.append("Order Type: ").append(orderType).append("\n");
         sb.append("Time: ").append(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"))).append("\n\n");
 
         sb.append("🍽️  Items Ordered:\n");
@@ -88,7 +88,7 @@ public class Receipt implements Orderable {
         try {
             Files.createDirectories(dir);
             Files.write(file, getSummary().getBytes());
-            System.out.println("✅ Receipt saved to: " + file);
+            System.out.println("✅ Order saved to: " + file);
         } catch (IOException e) {
             System.out.println("❌ Error saving receipt: " + e.getMessage());
         }
