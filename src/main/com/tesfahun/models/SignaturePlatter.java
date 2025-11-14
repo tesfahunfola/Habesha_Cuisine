@@ -3,19 +3,17 @@ package main.com.tesfahun.models;
 import java.util.ArrayList;
 import java.util.List;
 
-// SignaturePlatter extends CuisinePlatter and defines preset sandwiches with fixed toppings
 
-
-// SignaturePlatter extends CuisinePlatter and defines preset sandwiches with fixed toppings
+// SignaturePlatter extends CuisinePlatter and defines preset platter with fixed toppings
 public class SignaturePlatter extends CuisinePlatter {
 
-    // Constructor takes the type of signature sandwich (e.g. "veggie combo", "meat combo")
+    // Constructor takes the type of signature platter (e.g. "veggie combo", "meat combo")
     public SignaturePlatter(String type) {
-        // Always small" White injera for signature sandwiches
+        // Always small" White injera for signature platter
         super("Full", getBread(), getToppings(type), isToasted(type));
     }
 
-    // Always uses regular injera for signature sandwiches
+    // Always uses regular injera for signature platter
     private static Injera getBread() {
         return new Injera("regular", 7.00); // full" regular injera price
     }
@@ -28,7 +26,7 @@ public class SignaturePlatter extends CuisinePlatter {
         };
     }
 
-    // Returns a preset list of toppings depending on the sandwich type
+    // Returns a preset list of toppings depending on the  platter type
     private static List<Topping> getToppings(String type) {
         List<Topping> toppings = new ArrayList<>();
         switch (type.toLowerCase()) {
