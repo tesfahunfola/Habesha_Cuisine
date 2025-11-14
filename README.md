@@ -175,7 +175,7 @@ Unit tests are provided for key classes using JUnit 5. To run the tests:
 5. View order summary, add tip, and checkout.
 6. Receipt is automatically saved.
 
-   ## 🤝 Credits
+   ## Credits
 
 
 👨‍💻 **Developed by:** *Tesfahun Fola*  
