@@ -1,4 +1,4 @@
-# Habesha Cuisine Ordering System
+# Habesha Cuisine
 
 ## Table of Contents
 - [Description](#description)
