@@ -1,5 +1,24 @@
 # Habesha Cuisine Ordering System
 
+## Table of Contents
+- [Description](#description)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Installation and Running](#installation-and-running)
+  - [Prerequisites](#prerequisites)
+  - [Steps to Run](#steps-to-run)
+  - [Building with IntelliJ IDEA](#building-with-intellij-idea)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Testing](#testing)
+  - [Prerequisites](#prerequisites-1)
+  - [Running Tests](#running-tests)
+  - [Test Coverage](#test-coverage)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
 ## Description
 Habesha Cuisine is a Java console-based application designed for an Ethiopian-inspired restaurant. It allows customers to place orders interactively through a text-based interface, including custom cuisine platters (injera-based dishes), drinks, appetizers, and signature platters. The system calculates subtotals, taxes (10%), tips, and generates receipts saved to a local folder.
 
@@ -14,6 +33,17 @@ This project simulates a point-of-sale system for a restaurant, focusing on Ethi
 - **Receipt Generation**: Automatically save detailed receipts to the `receipts/` folder with timestamps.
 - **Order Types**: Support for Dine-in or Takeout orders.
 - **User-Friendly Interface**: Interactive menu-driven console interface with emojis and clear prompts.
+
+## Screenshots
+![Screenshot 1](Screenshot/1Screenshot 2025-11-14 033736.png)
+![Screenshot 2](Screenshot/2Screenshot 2025-11-14 034022.png)
+![Screenshot 3](Screenshot/3Screenshot 2025-11-14 034122.png)
+![Screenshot 4](Screenshot/4Screenshot 2025-11-14 034231.png)
+![Screenshot 5](Screenshot/5Screenshot 2025-11-14 034336.png)
+![Screenshot 6](Screenshot/6Screenshot 2025-11-14 034432.png)
+![Screenshot 7](Screenshot/7Screenshot 2025-11-14 034530.png)
+![Screenshot 8](Screenshot/8Screenshot 2025-11-14 034626.png)
+![Screenshot 9](Screenshot/9Screenshot 2025-11-14 034712.png)
 
 ## Installation and Running
 ### Prerequisites
