@@ -35,15 +35,15 @@ This project simulates a point-of-sale system for a restaurant, focusing on Ethi
 - **User-Friendly Interface**: Interactive menu-driven console interface with emojis and clear prompts.
 
 ## Screenshots
-![Screenshot 1](![1Screenshot 2025-11-14 033736.png](Screenshot/1Screenshot%202025-11-14%20033736.png)
-![Screenshot 2](![2Screenshot 2025-11-14 034022.png](Screenshot/2Screenshot%202025-11-14%20034022.png)
-![Screenshot 3](![3Screenshot 2025-11-14 034122.png](Screenshot/3Screenshot%202025-11-14%20034122.png)
-![Screenshot 4](![4Screenshot 2025-11-14 034231.png](Screenshot/4Screenshot%202025-11-14%20034231.png)
-![Screenshot 5](![5Screenshot 2025-11-14 034336.png](Screenshot/5Screenshot%202025-11-14%20034336.png)
-![Screenshot 6](![6Screenshot 2025-11-14 034432.png](Screenshot/6Screenshot%202025-11-14%20034432.png)
-![Screenshot 7](![7Screenshot 2025-11-14 034530.png](Screenshot/7Screenshot%202025-11-14%20034530.png)
-![Screenshot 8](![8Screenshot 2025-11-14 034626.png](Screenshot/8Screenshot%202025-11-14%20034626.png)
-![Screenshot 9](![9Screenshot 2025-11-14 034712.png](Screenshot/9Screenshot%202025-11-14%20034712.png)
+![Screenshot 1]![1Screenshot 2025-11-14 033736.png](Screenshot/1Screenshot%202025-11-14%20033736.png)
+![Screenshot 2]![2Screenshot 2025-11-14 034022.png](Screenshot/2Screenshot%202025-11-14%20034022.png)
+![Screenshot 3]![3Screenshot 2025-11-14 034122.png](Screenshot/3Screenshot%202025-11-14%20034122.png)
+![Screenshot 4]![4Screenshot 2025-11-14 034231.png](Screenshot/4Screenshot%202025-11-14%20034231.png)
+![Screenshot 5]![5Screenshot 2025-11-14 034336.png](Screenshot/5Screenshot%202025-11-14%20034336.png)
+![Screenshot 6]![6Screenshot 2025-11-14 034432.png](Screenshot/6Screenshot%202025-11-14%20034432.png)
+![Screenshot 7]![7Screenshot 2025-11-14 034530.png](Screenshot/7Screenshot%202025-11-14%20034530.png)
+![Screenshot 8]![8Screenshot 2025-11-14 034626.png](Screenshot/8Screenshot%202025-11-14%20034626.png)
+![Screenshot 9]![9Screenshot 2025-11-14 034712.png](Screenshot/9Screenshot%202025-11-14%20034712.png)
 
 ## Installation and Running
 ### Prerequisites
