@@ -9,6 +9,7 @@
   - [Steps to Run](#steps-to-run)
   - [Building with IntelliJ IDEA](#building-with-intellij-idea)
 - [Project Structure](#project-structure)
+- [UML Diagram](#uml-diagram)
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
   - [Prerequisites](#prerequisites-1)
@@ -98,6 +99,9 @@ Habesha_Cuisine/
 │                   └── PlatterBuilder.java # Builder for custom platters
 └── out/                      # Compiled classes (excluded from git)
 ```
+
+## UML Diagram
+![Habesha Cuisine UML Diagram]![Habesha_Cuisine UML.drawio.png](UML%20diagram/Habesha_Cuisine%20UML.drawio.png)
 
 ## Technologies Used
 - **Java**: Core programming language for the application.
