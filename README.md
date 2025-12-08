@@ -17,7 +17,7 @@
   - [Test Coverage](#test-coverage)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
+- [Credits](#credits)
 - [Contact](#contact)
 
 ## Description
@@ -175,11 +175,19 @@ Unit tests are provided for key classes using JUnit 5. To run the tests:
 5. View order summary, add tip, and checkout.
 6. Receipt is automatically saved.
 
+   ## Credits
+
+
+👨‍💻 **Developed by:** *Tesfahun Fola*  
+🎓 *Pluralsight Java Developer Academy*  
+
+🧑‍🏫 **Instructor:** ***Maaike*** — thank you again for the guidance, encouragement, and support throughout this capstone journey! 🙏✨  
+
+💡 *Capstone Project 2 — Habesha Cuisine CLI Application*  
+
 ## Contributing
 Feel free to fork the repository and submit pull requests for improvements or bug fixes.
 
-## License
-This project is open-source. No specific license is defined; use at your own discretion.
 
 ## Contact
 For questions or feedback, please reach out to the project maintainer.
