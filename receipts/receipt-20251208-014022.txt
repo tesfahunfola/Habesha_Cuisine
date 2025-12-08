@@ -1,0 +1,30 @@
+╔════════════════════════════════════╗
+║        🎀  🧾 ORDER RECEIPT 🧾  🎀║
+╚════════════════════════════════════╝
+
+Order Type: Dine-in
+Time: 2025-12-08 01:40:22
+
+🍽️  Items Ordered:
+  • Veggie" regular injera (toasted)
+  - Misir (Red Lentils) [$4.00]
+  - Ater (Split Peas) [$3.00]
+  - Tikil Gomen (Cabbage) [$2.50]
+  [$15.00]
+  • Full" regular injera
+  - Gored [$10.00]
+  - Awaze Tibs [$8.00]
+  - Bozena Shiro [$11.00]
+  - Minchet [$9.00]
+  - Beef Alicha [$8.00]
+  [$53.00]
+  • medium Tella (Traditional Beer)  [$2.50]
+  • Appetizers - Kitfo Bread  [$5.50]
+
+💵 Subtotal: $76.00
+💰 Tax (10%): $7.60
+💖 Tip: $15.20
+──────────────────────────────────────
+🧮 Total: $98.80
+──────────────────────────────────────
+⏰ Estimated Wait Time: 10–15 minutes
