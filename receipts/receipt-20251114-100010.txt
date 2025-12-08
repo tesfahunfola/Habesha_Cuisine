@@ -1,0 +1,37 @@
+╔════════════════════════════════════╗
+║        🎀  🧾 ORDER RECEIPT 🧾  🎀║
+╚════════════════════════════════════╝
+
+Order Type: Takeout
+Time: 2025-11-14 10:00:10
+
+🍽️  Items Ordered:
+  • Full" Gluten Free injera
+  - Jalapeños [$0.00]
+  - Salad [$0.00]
+  - Kitfo (extra) [$35.00]
+  - Ranch [$0.00]
+  [$42.00]
+  • medium Ethiopian Spiced Tea  [$2.50]
+  • Appetizers - Veggie rolls  [$5.50]
+  • Full" regular injera (toasted)
+  - Kitfo [$9.00]
+  - Tibs [$10.50]
+  - Key Wot [$7.50]
+  - Gomen Besiga [$6.00]
+  [$40.00]
+  • Full" regular injera (toasted)
+  - Misir [$8.00]
+  - Gomen [$7.50]
+  - Key Siir [$3.00]
+  - Shiro wot [$5.00]
+  - Ater [$5.00]
+  [$35.50]
+
+💵 Subtotal: $125.50
+💰 Tax (10%): $12.55
+💖 Tip: $18.83
+──────────────────────────────────────
+🧮 Total: $156.88
+──────────────────────────────────────
+⏰ Estimated Wait Time: 10–15 minutes

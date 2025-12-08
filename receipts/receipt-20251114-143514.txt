@@ -1,0 +1,32 @@
+╔════════════════════════════════════╗
+║        🎀  🧾 ORDER RECEIPT 🧾  🎀║
+╚════════════════════════════════════╝
+
+Order Type: Dine-in
+Time: 2025-11-14 14:35:14
+
+🍽️  Items Ordered:
+  • Full" Gluten Free injera (toasted)
+  - Tibs (extra) [$35.00]
+  - Kitfo [$15.00]
+  - Mitimita [$0.00]
+  - Garlic [$0.00]
+  - Ethiopian Herbs [$0.00]
+  - Ethiopian Mustard [$0.00]
+  [$57.00]
+  • small Tej (Honey Wine)  [$2.00]
+  • Appetizers - Sambusa  [$5.50]
+  • Full" regular injera (toasted)
+  - Kitfo [$9.00]
+  - Tibs [$10.50]
+  - Key Wot [$7.50]
+  - Gomen Besiga [$6.00]
+  [$40.00]
+
+💵 Subtotal: $104.50
+💰 Tax (10%): $10.45
+💖 Tip: $20.90
+──────────────────────────────────────
+🧮 Total: $135.85
+──────────────────────────────────────
+⏰ Estimated Wait Time: 10–15 minutes
